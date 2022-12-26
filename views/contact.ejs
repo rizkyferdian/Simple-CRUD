@@ -1,0 +1,41 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-12 ">
+            <h2 class="mt-5">Daftar Contact</h2>
+
+            <a href="/contact/add" class="btn btn-primary mt-4">Tambah data contact</a>
+
+            <table class="table table-striped mt-4">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Nomor HP</th>
+                        <th scope="col">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% contacts.forEach((contact,i)=> { i++ %>
+                        <tr>
+                            <th scope="row">
+                                <%= i++ %>
+                            </th>
+                            <td>
+                                <%= contact.nama %>
+                            </td>
+                            <td>
+                                <%= contact.nohp %>
+                            </td>
+                            <td><a href="/contact/<%= contact.nama %> " class="btn btn-success  badge rounded-pill"><i
+                                        class="bi bi-info-circle"></i>
+                                    detail</a></td>
+                        </tr>
+
+                        <% }) %>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
